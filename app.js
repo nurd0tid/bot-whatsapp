@@ -9,7 +9,12 @@ const port = 3000;
 app.use(cors());
 
 const client = new Client({
-    authStrategy: new LocalAuth()
+    puppeteer: {
+        headless: true,
+        args:['--no-sandbox','--use-gl=egl'],
+        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
+    },
+    authStrategy: new LocalAuth(),
 });
 
 client.on('qr', (qr) => {
@@ -32,7 +37,7 @@ client.on('message', (msg) => {
             const commandHandler = require(`./commands/${command}.js`);
             commandHandler(client, msg);
         } catch (error) {
-            msg.error('Command not found:', command);
+            msg.reply(`Command not found: ${command}`);
         }
     }
 });
