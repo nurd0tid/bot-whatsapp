@@ -12,6 +12,7 @@ module.exports = (client, msg) => {
                         '➡️ *_/brainly_* [pertanyaan] - Temukan jawaban dengan brainly\n'+
                         '➡️ *_/addlist_* [Judul (Judulnya) Deskripsi (Apa)] - Membuat List Acara Atau Semacamnya.\n'+
                         '➡️ *_/ceklist_* [Judul (Judulnya)] - Temukan List Acara dan Daftar Namanya.\n'+
+                        '➡️ *_/changebg_* [warna] - Ganti warna background foto kamu.\n'+
                         '\n*Donasi via*\n' +
                         'Saweria: https://saweria.co/itsPOPOY';
     
