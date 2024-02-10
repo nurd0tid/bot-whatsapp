@@ -34,7 +34,7 @@ module.exports = async (client, msg) => {
         const response = await axios.post('https://api.remove.bg/v1.0/removebg', formData, {
             headers: {
                 ...formData.getHeaders(),
-                'X-Api-Key': 'your api',
+                'X-Api-Key': 'your key',
             },
             responseType: 'arraybuffer',
         });

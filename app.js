@@ -9,11 +9,6 @@ const port = 3000;
 app.use(cors());
 
 const client = new Client({
-    puppeteer: {
-        headless: true,
-        args:['--no-sandbox','--use-gl=egl'],
-        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
-    },
     authStrategy: new LocalAuth(),
 });
 
